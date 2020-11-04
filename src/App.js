@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import icon from "./assets/yt.svg";
+import YoutubeClone from "./components/YoutubeClone";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="App">
+        <img src={icon} alt="" className="icon" />
+        <h2>Youtube Clone</h2>
+      </div>
+      <YoutubeClone />
     </div>
   );
 }
