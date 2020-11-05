@@ -2,7 +2,7 @@ import React from 'react';
 import SearchBar from './Searchbar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
-import VideoDetail from './VideoDetail';
+import MainVideoFrame from './MainVideoFrame';
 
 class YoutubeClone extends React.Component {
     state = {
@@ -19,7 +19,6 @@ class YoutubeClone extends React.Component {
         this.setState({
             videos: response.data.items
         })
-        console.log("this is resp",response);
     };
     handleVideoSelect = (video) => {
         this.setState({selectedVideo: video})
@@ -27,15 +26,15 @@ class YoutubeClone extends React.Component {
 
     render() {
         return (
-            <div className='ui container' style={{marginTop: '1em'}}>
+            <div>
                 <SearchBar handleFormSubmit={this.handleSubmit}/>
-                <div className='ui grid'>
-                    <div className="ui row">
-                        <div className="eleven wide column">
-                            <VideoDetail video={this.state.selectedVideo}/>
+                <div>
+                    <div>
+                        <div>
+                            <MainVideoFrame video={this.state.selectedVideo} />
                         </div>
-                        <div className="five wide column">
-                            <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos}/>
+                        <div>
+                            <VideoList handleVideoSelect={this.handleVideoSelect} videos={this.state.videos} />
                         </div>
                     </div>
                 </div>

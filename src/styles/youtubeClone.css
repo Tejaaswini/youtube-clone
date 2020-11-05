@@ -1,14 +1,3 @@
-/* .video-item {
-    display: flex !important;
-    align-items: center !important;
-    cursor: pointer;
-}
-
-.video-item.item img {
-    max-width: 200px;
-    max-height: 250px ;
-} */
-
 .seachbar{
     width:40vw;
     height:5vh;
@@ -17,4 +6,24 @@
 .searchField{
     margin-left: 30%;
     margin-top: 5vh;
+}
+.video-list{
+    margin-left: 75%;
+    cursor: pointer;
+}
+.video-desc{
+    margin-right: 30vw;
+    margin-left: 3vw;
+}
+.video-list-desc{
+    margin:1vh 4vw 3vh 0;
+}
+.video-player{
+    margin-top: 10vh;
+    margin-left: 4vw;
+    width: 90vw;
+    height: 90vh;
+}
+.video-header,.video-desc{
+    margin-left: 4vw;
 }

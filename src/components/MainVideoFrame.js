@@ -1,6 +1,6 @@
 import React from "react";
 
-const VideoDetail = ({ video }) => {
+const MainVideoFrame = ({ video }) => {
   if (!video) {
     return (
       <div style={{marginTop:"50px"}}>
@@ -17,15 +17,15 @@ const VideoDetail = ({ video }) => {
   console.log(typeof video);
   return (
     <div>
-      <div className="ui embed">
-        <iframe src={videoSrc} allowFullScreen title="Video player" />
+      <div>
+        <iframe src={videoSrc} allowFullScreen title="Video player" className="video-player"/>
       </div>
-      <div className="ui segment">
-        <h4 className="ui header">{video.snippet.title}</h4>
-        <p>{video.snippet.description}</p>
+      <div >
+        <h2 className="video-header">{video.snippet.title}</h2>
+        <p className="video-desc">{video.snippet.description}</p>
       </div>
     </div>
-  );
+  )
 };
 
-export default VideoDetail;
+export default MainVideoFrame;
